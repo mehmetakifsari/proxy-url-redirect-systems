@@ -6,21 +6,25 @@ session_start();
 
 if (empty($_SESSION['auth'])) { header('Location: login.php'); exit; }
 
-$BASE       = '/home/proje/public_html/proje1';
+/** -----------------------------------------------------------
+ *  YOL AYARI — sabit path yerine bulunduğu klasörü kullan
+ *  --------------------------------------------------------- */
+$BASE       = realpath(__DIR__) ?: __DIR__;
 $PROXY      = $BASE . '/proxy.txt';
 $BAD        = $BASE . '/hatali_proxy.txt';
 $DEF_BAD    = $BASE . '/kesin_hatali_proxy.txt';
 $COUNTS     = $BASE . '/bad_counts.json';
 $URLS       = $BASE . '/url.txt';
 $LOG        = $BASE . '/bot.log';
+$LOG1       = $BASE . '/yt_clicker.log';
 $FAIL_LIMIT = 5;
 
 if (empty($_SESSION['csrf'])) $_SESSION['csrf'] = bin2hex(random_bytes(16));
 $csrf = $_SESSION['csrf'];
-$LOG_TOKEN = md5($csrf); // log_view.php erişim anahtarı
+$LOG_TOKEN  = md5($csrf);
+$LOG1_TOKEN = $LOG_TOKEN;
 
 function h($s){ return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
-
 function read_lines(string $p): array {
   if (!is_file($p)) return [];
   $out=[];
@@ -29,17 +33,17 @@ function read_lines(string $p): array {
     if ($ln==='' || $ln[0]==='#') continue;
     $out[$ln]=true;
   }
-  return array_keys($out);
+  return array_values(array_keys($out));
 }
 function write_lines(string $p, array $arr): void {
   $arr=array_values(array_unique(array_map('trim',$arr)));
   $tmp=$p.'.tmp-'.uniqid('',true);
   file_put_contents($tmp, implode("\n", array_filter($arr))."\n");
-  rename($tmp,$p);
+  @rename($tmp,$p);
 }
 function load_counts(string $p): array {
   if (!is_file($p)) return [];
-  $raw = file_get_contents($p);
+  $raw = (string)@file_get_contents($p);
   $j = json_decode($raw,true);
   return is_array($j) ? $j : [];
 }
@@ -47,31 +51,24 @@ function load_counts(string $p): array {
 /**
  * Listeler arası çakışmaları temizler ve gerekirse dosyaları günceller.
  * Öncelik: DEF_BAD > BAD > PROXY
- * - DEF_BAD’da olan IP, BAD ve PROXY’den çıkarılır.
- * - BAD’de olan IP, PROXY’den çıkarılır.
- * Dönen dizi: ['proxy'=>[], 'bad'=>[], 'def'=>[]]
  */
 function reconcile_and_persist(string $proxyFile, string $badFile, string $defFile): array {
   $proxy = read_lines($proxyFile);
   $bad   = read_lines($badFile);
   $def   = read_lines($defFile);
 
-  $proxy0 = $proxy; $bad0 = $bad; $def0 = $def;
+  $proxy0 = $proxy; $bad0 = $bad;
 
-  // def'ler bad ve proxy'den silinir
   if ($def) {
     $bad   = array_values(array_diff($bad,   $def));
     $proxy = array_values(array_diff($proxy, $def));
   }
-  // bad'de olanlar proxy'den silinir
   if ($bad) {
     $proxy = array_values(array_diff($proxy, $bad));
   }
 
-  // Sadece değişmişse yaz
   if ($proxy !== $proxy0) write_lines($proxyFile, $proxy);
   if ($bad   !== $bad0)   write_lines($badFile,   $bad);
-  // $def değişmez (yazmaya gerek yok)
 
   return ['proxy'=>$proxy,'bad'=>$bad,'def'=>$def];
 }
@@ -86,8 +83,6 @@ if ($_SERVER['REQUEST_METHOD']==='POST' && (($_POST['csrf'] ?? '') === $csrf)) {
     $text = (string)($_POST['proxy_text'] ?? '');
     $lines = array_filter(array_map('trim', preg_split('/\R+/', $text)));
     write_lines($PROXY, $lines);
-
-    // Kaydettikten sonra da çakışmaları temizle
     reconcile_and_persist($PROXY,$BAD,$DEF_BAD);
     $msg[] = "proxy.txt kaydedildi (".count(read_lines($PROXY))." satır).";
   }
@@ -101,15 +96,12 @@ if ($_SERVER['REQUEST_METHOD']==='POST' && (($_POST['csrf'] ?? '') === $csrf)) {
     $sel = $_POST['sel'] ?? [];
     $sel = is_array($sel)? $sel : [];
 
-    // Mevcut listeleri oku
     $bad   = read_lines($BAD);
     $def   = read_lines($DEF_BAD);
     $proxy = read_lines($PROXY);
 
-    // Kesin hatalı olanlar hiçbir şekilde geri dönmez
     $eligible = array_values(array_diff($sel, $def));
 
-    // Aktife ekle (unique), BAD'den çıkar
     if ($eligible) {
       $proxy = array_values(array_unique(array_merge($proxy, $eligible)));
       write_lines($PROXY, $proxy);
@@ -118,8 +110,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST' && (($_POST['csrf'] ?? '') === $csrf)) {
       write_lines($BAD, $new_bad);
     }
 
-    // Son kez çakışmaları temizle
-    $after = reconcile_and_persist($PROXY,$BAD,$DEF_BAD);
+    reconcile_and_persist($PROXY,$BAD,$DEF_BAD);
     $msg[] = count($eligible)." proxy geri aktarıldı.";
   }
   elseif ($action === 'restore_all_eligible') {
@@ -142,7 +133,6 @@ if ($_SERVER['REQUEST_METHOD']==='POST' && (($_POST['csrf'] ?? '') === $csrf)) {
       $remaining = array_values(array_diff($bad, $eligible));
       write_lines($BAD, $remaining);
 
-      // Çakışmaları temizle
       reconcile_and_persist($PROXY,$BAD,$DEF_BAD);
       $msg[] = count($eligible)." proxy geri aktarıldı.";
     } else {
@@ -153,7 +143,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST' && (($_POST['csrf'] ?? '') === $csrf)) {
   $err[] = 'Oturum/CSRF doğrulaması başarısız. Sayfayı yenileyin.';
 }
 
-// --- Render'dan önce mutlaka senkronize et ---
+// --- Render öncesi senkronizasyon ---
 $lists = reconcile_and_persist($PROXY,$BAD,$DEF_BAD);
 
 $proxy_lines  = $lists['proxy'];
@@ -161,7 +151,8 @@ $bad_lines    = $lists['bad'];
 $def_lines    = $lists['def'];
 $counts       = load_counts($COUNTS);
 $url_lines    = read_lines($URLS);
-$log_size     = is_file($LOG) ? filesize($LOG) : 0;
+$log_size     = is_file($LOG)  ? filesize($LOG)  : 0;
+$log1_size    = is_file($LOG1) ? filesize($LOG1) : 0;
 ?>
 <!doctype html>
 <html lang="tr">
@@ -188,13 +179,17 @@ $log_size     = is_file($LOG) ? filesize($LOG) : 0;
   .msg{padding:8px 10px;border-radius:8px;margin:6px 0}
   .ok{background:#dcfce7;color:#065f46}.bad{background:#fee2e2;color:#991b1b}
   .pill{display:inline-block;background:#f3f4f6;border-radius:999px;padding:4px 10px;font-size:12px}
-  #logbox{background:#0b1020;color:#c7ffe0;border:1px solid #132347;border-radius:12px;padding:10px;height:360px;overflow:auto;font-family:ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap}
+  .logWrap{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .logCard{background:#0b1020;border:1px solid #132347;border-radius:12px;padding:0;overflow:hidden}
+  .logHead{display:flex;justify-content:space-between;align-items:center;background:#111827;color:#fff;padding:8px 12px}
+  .logBody{height:360px;overflow:auto;background:#0b1020;color:#c7ffe0;white-space:pre-wrap;padding:10px;font-family:ui-monospace,Menlo,Consolas,monospace}
   .flex{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
   .topbar{position:sticky; top:0; z-index:10; display:flex; gap:10px; align-items:center; justify-content:flex-end; background:#111827; color:#fff; padding:8px 12px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,.15); margin-bottom:12px}
   .topbar .pill{background:#0f172a;color:#a7f3d0}
   .topbar .btn{background:#0b1222;color:#fff;border-color:#334155}
   .topbar select{padding:6px 8px;border:1px solid #334155;border-radius:8px;background:#0b1222;color:#fff}
   .topbar label{display:flex;align-items:center;gap:6px;font-size:14px}
+  @media (max-width: 980px){ .row{grid-template-columns:1fr} .logWrap{grid-template-columns:1fr} }
 </style>
 </head>
 <body>
@@ -211,8 +206,8 @@ $log_size     = is_file($LOG) ? filesize($LOG) : 0;
     <span class="pill" style="padding:4px 10px;border-radius:999px">
       <span id="countdown">10</span> sn
     </span>
-    <label title="Açıkken log + proxy listeleri yenilenir; kapalıyken tam sayfa yenilenir.">
-      <input type="checkbox" id="softMode" checked> Sadece log & proxy listesini yenile
+    <label title="Açıkken log + (yalnızca hatalı listeleri) yeniler; kapalıyken tam sayfa yenilenir.">
+      <input type="checkbox" id="softMode" checked> Sadece log & hatalı listelerini yenile
     </label>
     <button class="btn" id="btnDoRefresh" type="button">Şimdi Yenile</button>
   </div>
@@ -220,30 +215,44 @@ $log_size     = is_file($LOG) ? filesize($LOG) : 0;
   <?php foreach($msg as $m) echo '<div class="msg ok">✅ '.h($m).'</div>'; ?>
   <?php foreach($err as $e) echo '<div class="msg bad">⚠️ '.h($e).'</div>'; ?>
 
-  <div class="row3">
-    <div class="card">
-      <div class="flex" style="justify-content:space-between">
-        <h3>Bot Kontrol</h3>
-        <div class="muted">Log boyutu: <?=number_format((float)$log_size)?> bayt</div>
+  <div class="card">
+    <div class="flex" style="justify-content:space-between;margin-bottom:8px">
+      <h3>Bot Kontrol</h3>
+      <div class="muted">Sol log: <?=number_format((float)$log_size)?> bayt • Sağ log: <?=number_format((float)$log1_size)?> bayt</div>
+    </div>
+    <div class="flex" style="margin-bottom:8px">
+      <button class="btn green"  id="btnStart">▶ Başlat</button>
+      <button class="btn danger" id="btnStop">■ Durdur</button>
+      <button class="btn"        id="btnClearLog">Log Temizle</button>
+      <button class="btn"        id="btnRefreshBoth">Logları Yenile</button>
+      <span class="muted" id="statusText">hazır</span>
+    </div>
+
+    <div class="logWrap">
+      <div class="logCard">
+        <div class="logHead">
+          <strong>bot.log</strong>
+          <button class="btn" id="btnRefreshLeft" type="button">Yenile</button>
+        </div>
+        <div id="leftLog" class="logBody">(sol log)</div>
       </div>
-      <div class="flex" style="margin-bottom:8px">
-        <button class="btn green"  id="btnStart">▶ Başlat</button>
-        <button class="btn danger" id="btnStop">■ Durdur</button>
-        <button class="btn"        id="btnClearLog">Log Temizle</button>
-        <button class="btn"        id="btnRefreshLog">Log Yenile</button>
-        <span class="muted" id="statusText">hazır</span>
+
+      <div class="logCard">
+        <div class="logHead">
+          <strong>yt_clicker.log</strong>
+          <button class="btn" id="btnRefreshRight" type="button">Yenile</button>
+        </div>
+        <div id="rightLog" class="logBody">(sağ log)</div>
       </div>
-      <div id="logbox">(log burada akacak)</div>
     </div>
   </div>
 
-  <!-- 1. SATIR: Aktif Proxy (sol) + URL (sağ) -->
   <div class="row" style="margin-top:16px">
     <div id="activeCard" class="card">
       <h3>Aktif Proxy Listesi (<span class="muted"><?=count($proxy_lines)?> satır</span>)</h3>
       <form method="post">
         <input type="hidden" name="csrf" value="<?=h($csrf)?>">
-        <textarea name="proxy_text" spellcheck="false"><?=h(implode("\n",$proxy_lines))?></textarea>
+        <textarea id="proxyTextarea" name="proxy_text" spellcheck="false"><?=h(implode("\n",$proxy_lines))?></textarea>
         <div style="margin-top:8px" class="flex">
           <button class="btn primary" name="action" value="save_proxy">Kaydet</button>
         </div>
@@ -262,7 +271,6 @@ $log_size     = is_file($LOG) ? filesize($LOG) : 0;
     </div>
   </div>
 
-  <!-- 2. SATIR: Hatalı (sol) + Kesin Hatalı (sağ) -->
   <div class="row" style="margin-top:16px">
     <div id="badCard" class="card">
       <h3>Hatalı Proxyler (tekrar denenebilir)</h3>
@@ -315,17 +323,21 @@ $log_size     = is_file($LOG) ? filesize($LOG) : 0;
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  // === PHP değişkenleri ===
   var csrf = <?php echo json_encode($csrf); ?>;
   var LOG_TOKEN = <?php echo json_encode($LOG_TOKEN); ?>;
+  var LOG1_TOKEN = <?php echo json_encode($LOG1_TOKEN); ?>;
 
-  // === Elemanlar ===
+  // Buton/elemanlar
   var btnStart = document.getElementById('btnStart');
   var btnStop = document.getElementById('btnStop');
   var btnClearLog = document.getElementById('btnClearLog');
-  var btnRefreshLog = document.getElementById('btnRefreshLog');
+  var btnRefreshBoth = document.getElementById('btnRefreshBoth');
+  var btnRefreshLeft = document.getElementById('btnRefreshLeft');
+  var btnRefreshRight = document.getElementById('btnRefreshRight');
   var statusText = document.getElementById('statusText');
-  var logbox = document.getElementById('logbox');
+
+  var leftLog = document.getElementById('leftLog');
+  var rightLog = document.getElementById('rightLog');
 
   var countdownEl = document.getElementById('countdown');
   var selectEl    = document.getElementById('refreshSelect');
@@ -338,9 +350,12 @@ document.addEventListener('DOMContentLoaded', function () {
   var left = refreshSeconds;
 
   function setStatus(t){ if (statusText) statusText.textContent = t; }
-  function scrollLogToBottom(){ if (logbox) logbox.scrollTop = logbox.scrollHeight; }
+  function autoscroll(preEl){
+    if (!preEl) return;
+    var atBottom = (preEl.scrollTop + preEl.clientHeight + 10) >= preEl.scrollHeight;
+    if (atBottom) preEl.scrollTop = preEl.scrollHeight;
+  }
 
-  // --- Bot API
   async function apiRun(action){
     setStatus('çalışıyor…');
     try{
@@ -368,38 +383,45 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // --- LOG
-  async function fetchLog(){
-    try{
-      var res = await fetch('log_view.php?tail=5000&token=' + encodeURIComponent(LOG_TOKEN), {
-        cache: 'no-store',
-        headers: { 'X-Requested-With': 'XMLHttpRequest' }
-      });
-      var txt = await res.text();
-
-      // Renklendirme
-      var lines = txt.split(/\r?\n/).map(function(l){
-        if (l.indexOf('[ROUTE]') !== -1) {
-          return l
-            .replace('[ROUTE]', '<span style="color:#93c5fd">[ROUTE]</span>')
-            .replace(/(URL\s+)(\S+)/, '$1<span style="color:#a7f3d0">$2</span>')
-            .replace(/(IP\s+)(\S+)/, '$1<span style="color:#fca5a5">$2</span>');
-        } else if (/\[ERROR\]|\[WARN\]/.test(l)) {
-          return '<span style="color:#fca5a5">'+l+'</span>';
-        } else if (/\[INFO\]|\[SKIPPED\]/.test(l)) {
-          return '<span style="color:#a7f3d0">'+l+'</span>';
-        }
-        return l;
-      }).join('\n');
-
-      logbox.innerHTML = lines; // renklendirme için HTML
-      scrollLogToBottom();
-    }catch(e){
-      // Sessiz
-    }
+  function colorize(txt){
+    return (txt||'').split(/\r?\n/).map(function(l){
+      if (l.indexOf('[ROUTE]') !== -1) {
+        return l
+          .replace('[ROUTE]', '<span style="color:#93c5fd">[ROUTE]</span>')
+          .replace(/(URL\s+)(\S+)/, '$1<span style="color:#a7f3d0">$2</span>')
+          .replace(/(IP\s+)(\S+)/, '$1<span style="color:#fca5a5">$2</span>');
+      } else if (/\[ERROR\]|\[WARN\]/.test(l)) {
+        return '<span style="color:#fca5a5">'+l+'</span>';
+      } else if (/\[INFO\]|\[SKIPPED\]/.test(l)) {
+        return '<span style="color:#a7f3d0">'+l+'</span>';
+      }
+      return l;
+    }).join('\n');
   }
 
-  // --- Parça yenileme (proxy/defbad kartları)
+  async function fetchLeft(){
+    try{
+      var res = await fetch('log_view.php?tail=12000&token=' + encodeURIComponent(LOG_TOKEN), {
+        cache: 'no-store', headers: { 'X-Requested-With': 'XMLHttpRequest' }
+      });
+      var txt = await res.text();
+      leftLog.innerHTML = colorize(txt);
+      autoscroll(leftLog);
+    }catch(e){}
+  }
+  async function fetchRight(){
+    try{
+      var res = await fetch('log1_view.php?tail=12000&token=' + encodeURIComponent(LOG1_TOKEN), {
+        cache: 'no-store', headers: { 'X-Requested-With': 'XMLHttpRequest' }
+      });
+      var txt = await res.text();
+      rightLog.innerHTML = colorize(txt);
+      autoscroll(rightLog);
+    }catch(e){}
+  }
+  async function fetchBoth(){ await Promise.all([fetchLeft(), fetchRight()]); }
+
+  // Yalnızca HATALI listeleri (bad/defBad) parça yenile (aktif proxy listesi sabit kalsın)
   async function replaceHTML(id, url){
     var el = document.getElementById(id);
     if (!el) return;
@@ -410,15 +432,13 @@ document.addEventListener('DOMContentLoaded', function () {
       el.innerHTML = html;
     }catch(e){}
   }
-  async function refreshProxyFragments(){
+  async function refreshHataListeleri(){
     await Promise.all([
-      replaceHTML('activeCard', 'proxy_view.php?part=active'),
       replaceHTML('badCard',    'proxy_view.php?part=bad'),
       replaceHTML('defBadCard', 'proxy_view.php?part=def')
     ]);
   }
 
-  // --- Oto yenile sayaç
   function setCountdownUI(){ if (countdownEl) countdownEl.textContent = String(left); }
   function restartCountdown(){
     var selVal = selectEl ? parseInt(selectEl.value, 10) : 10;
@@ -426,7 +446,8 @@ document.addEventListener('DOMContentLoaded', function () {
     left = refreshSeconds; setCountdownUI();
   }
   async function doSoftRefresh(){
-    await Promise.all([ fetchLog(), refreshProxyFragments() ]);
+    // aktif proxy textarea YENİLENMEZ
+    await Promise.all([ fetchBoth(), refreshHataListeleri() ]);
   }
   function tickOnce(){
     left -= 1;
@@ -447,45 +468,50 @@ document.addEventListener('DOMContentLoaded', function () {
     countdownTimer = setInterval(tickOnce, 1000);
   }
 
-  // --- Event bağlama
-  if (btnStart) btnStart.addEventListener('click', async function(){
+  function startPolling(){
+    if (pollTimer) clearInterval(pollTimer);
+    pollTimer = setInterval(fetchBoth, 2000);
+  }
+  function stopPolling(){
+    if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+  }
+
+  // Olaylar
+  document.getElementById('btnStart')?.addEventListener('click', async function(){
     var ok = await apiRun('start');
     if (ok){
-      await fetchLog();
-      if (pollTimer) clearInterval(pollTimer);
-      pollTimer = setInterval(fetchLog, 2000);
+      await fetchBoth();
+      startPolling();
     }
   });
-  if (btnStop) btnStop.addEventListener('click', async function(){
+  document.getElementById('btnStop')?.addEventListener('click', async function(){
     var ok = await apiRun('stop');
-    if (ok && pollTimer){ clearInterval(pollTimer); pollTimer=null; }
+    if (ok){ stopPolling(); }
   });
-  if (btnClearLog) btnClearLog.addEventListener('click', async function(){
+  document.getElementById('btnClearLog')?.addEventListener('click', async function(){
     var ok = await apiRun('clearlog');
-    if (ok){ logbox.textContent = ''; }
+    if (ok){ leftLog.textContent=''; rightLog.textContent=''; }
   });
-  if (btnRefreshLog) btnRefreshLog.addEventListener('click', fetchLog);
+  document.getElementById('btnRefreshBoth')?.addEventListener('click', fetchBoth);
+  document.getElementById('btnRefreshLeft')?.addEventListener('click', fetchLeft);
+  document.getElementById('btnRefreshRight')?.addEventListener('click', fetchRight);
 
-  if (selectEl) selectEl.addEventListener('change', restartCountdown);
-  if (btnDoRef) btnDoRef.addEventListener('click', function(){
+  selectEl?.addEventListener('change', restartCountdown);
+  btnDoRef?.addEventListener('click', function(){
     var soft = !!(softModeEl && softModeEl.checked);
     if (soft){ doSoftRefresh().then(restartCountdown); }
     else { window.location.reload(); }
   });
 
-  // Varsayılan: yumuşak yenile
+  // İlk yük ve sayaç
   if (softModeEl) softModeEl.checked = true;
-
-  // İlk yükleme
-  fetchLog();
+  fetchBoth();           // sayfa açılışında logları getir
+  startPolling();        // sayfa açıkken logları 2 sn’de bir al
   startCountdown();
 
   document.addEventListener('visibilitychange', function(){
-    if (document.hidden){
-      if (countdownTimer) clearInterval(countdownTimer);
-    }else{
-      startCountdown();
-    }
+    if (document.hidden){ if (countdownTimer) clearInterval(countdownTimer); }
+    else { startCountdown(); }
   });
 });
 </script>

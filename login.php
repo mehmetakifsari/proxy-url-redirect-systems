@@ -4,16 +4,14 @@ ini_set('default_charset','UTF-8');
 mb_internal_encoding('UTF-8');
 session_start();
 
-$USERS_FILE = __DIR__.'/.bot_users';  // proje içinde, .htaccess ile bloklanacak
+$USERS_FILE = __DIR__.'/.bot_users';
 $PANEL_URL  = '/proje1/bot_panel.php';
 $SESSION_KEY_AUTH = 'auth';
 $SESSION_KEY_USER = 'auth_user';
 
-// CSRF
 if (empty($_SESSION['csrf'])) $_SESSION['csrf'] = bin2hex(random_bytes(16));
 $csrf = $_SESSION['csrf'];
 
-// Zaten girişliyse panele
 if (!empty($_SESSION[$SESSION_KEY_AUTH])) {
   $next = (string)($_GET['next'] ?? $PANEL_URL);
   header('Location: '.$next);
@@ -70,22 +68,69 @@ $next = (string)($_GET['next'] ?? $PANEL_URL);
 <title>Giriş Yap</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;display:grid;place-items:center;min-height:100vh;background:#0b1021;color:#e5e7eb;margin:0}
-.card{background:#111827;padding:24px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.35);width:min(420px,92vw)}
-h1{margin:0 0 16px 0;font-size:20px}
-label{display:block;margin:12px 0 6px}
-input{width:100%;padding:10px 12px;border:1px solid #374151;border-radius:8px;background:#0f172a;color:#e5e7eb}
-button{width:100%;padding:10px 14px;border:1px solid #2563eb;background:#2563eb;color:#fff;border-radius:8px;cursor:pointer;margin-top:16px}
-.err{background:#7f1d1d;border:1px solid #dc2626;color:#fff;padding:10px;border-radius:8px;margin-bottom:12px}
-small{color:#9ca3af}
-a{color:#93c5fd;text-decoration:none}
+  /* Kaymaları engelleyen temel ayarlar */
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    margin:0;
+    min-height:100dvh;               /* mobilde güvenli yükseklik */
+    display:grid;
+    place-items:center;
+    background:#0b1021;
+    color:#e5e7eb;
+    scrollbar-gutter: stable both-edges; /* scrollbar alanını rezerve et -> layout kayması yok */
+  }
+  .card{
+    background:#111827;
+    padding:24px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+    width:min(420px,92vw);
+  }
+  h1{margin:0 0 16px 0;font-size:20px}
+  label{display:block;margin:12px 0 6px}
+  input{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid #374151;
+    border-radius:8px;
+    background:#0f172a;
+    color:#e5e7eb;
+    outline:none;
+  }
+  input:focus{border-color:#2563eb}
+  button{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid #2563eb;
+    background:#2563eb;
+    color:#fff;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:16px;
+    font-weight:600;
+  }
+  .err{
+    background:#7f1d1d;
+    border:1px solid #dc2626;
+    color:#fff;
+    padding:10px 12px;
+    border-radius:8px;
+  }
+  .msg{min-height:44px; margin-bottom:12px;} /* Hata alanı için sabit yükseklik -> zıplama yok */
+  small{color:#9ca3af}
+  a{color:#93c5fd;text-decoration:none}
 </style>
 </head>
 <body>
   <form class="card" method="post" autocomplete="off">
     <h1>Bot Panel Giriş</h1>
 
-    <?php if ($err): ?><div class="err">⚠️ <?=h($err)?></div><?php endif; ?>
+    <div class="msg">
+      <?php if ($err): ?><div class="err">⚠️ <?=h($err)?></div><?php endif; ?>
+    </div>
 
     <input type="hidden" name="csrf" value="<?=h($csrf)?>">
     <input type="hidden" name="next" value="<?=h($next)?>">

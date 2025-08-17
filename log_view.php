@@ -33,7 +33,7 @@ header('Pragma: no-cache');
 header('Expires: 0');
 
 // ---- Ayarlar ----
-$BASE = '/home/proje/public_html/proje1';
+$BASE   = realpath(__DIR__) ?: __DIR__;
 $LOG  = $BASE . '/bot.log';
 
 // tail parametresi (son N bayt)

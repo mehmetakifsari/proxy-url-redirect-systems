@@ -1,0 +1,52 @@
+2025-08-17 18:17:57 [INFO] 5 URL işlenecek.
+2025-08-17 18:17:57 [INFO] 5 URL işlenecek.
+2025-08-17 18:17:57 [INFO] PW_HOME=/var/www/proje.amrdanismanlik.com/proje1/.pw  HEADLESS=True
+2025-08-17 18:17:57 [INFO] PW_HOME=/var/www/proje.amrdanismanlik.com/proje1/.pw  HEADLESS=True
+2025-08-17 18:17:59 === [1] OPEN https://sirtkoyu.org/ip_logger.php ===
+2025-08-17 18:17:59 === [1] OPEN https://sirtkoyu.org/ip_logger.php ===
+2025-08-17 18:18:06     [WARN] play tıklama/locator: Page.wait_for_selector: Timeout 6000ms exceeded.
+Call log:
+  - waiting for locator(".ytp-play-button.ytp-button") to be visible
+
+2025-08-17 18:18:06     [WARN] play tıklama/locator: Page.wait_for_selector: Timeout 6000ms exceeded.
+Call log:
+  - waiting for locator(".ytp-play-button.ytp-button") to be visible
+
+2025-08-17 18:18:06     ▶ klavye 'k' gönderildi
+2025-08-17 18:18:06     ▶ klavye 'k' gönderildi
+2025-08-17 18:18:06     120 saniye bekleniyor…
+2025-08-17 18:18:06     120 saniye bekleniyor…
+2025-08-17 18:20:06 === [1] DONE https://sirtkoyu.org/ip_logger.php ===
+2025-08-17 18:20:06 === [1] DONE https://sirtkoyu.org/ip_logger.php ===
+2025-08-17 18:20:07 === [2] OPEN https://sirtkoyu.org/v2/bdyQUG ===
+2025-08-17 18:20:07 === [2] OPEN https://sirtkoyu.org/v2/bdyQUG ===
+2025-08-17 18:20:21     ▶ play butonuna tıklandı
+2025-08-17 18:20:21     ▶ play butonuna tıklandı
+2025-08-17 18:20:21     120 saniye bekleniyor…
+2025-08-17 18:20:21     120 saniye bekleniyor…
+2025-08-17 18:22:21 === [2] DONE https://sirtkoyu.org/v2/bdyQUG ===
+2025-08-17 18:22:21 === [2] DONE https://sirtkoyu.org/v2/bdyQUG ===
+2025-08-17 18:22:22 === [3] OPEN https://sirtkoyu.org/v2/clXZ5K ===
+2025-08-17 18:22:22 === [3] OPEN https://sirtkoyu.org/v2/clXZ5K ===
+2025-08-17 18:22:34     ▶ play butonuna tıklandı
+2025-08-17 18:22:34     ▶ play butonuna tıklandı
+2025-08-17 18:22:34     120 saniye bekleniyor…
+2025-08-17 18:22:34     120 saniye bekleniyor…
+2025-08-17 18:24:34 === [3] DONE https://sirtkoyu.org/v2/clXZ5K ===
+2025-08-17 18:24:34 === [3] DONE https://sirtkoyu.org/v2/clXZ5K ===
+2025-08-17 18:24:35 === [4] OPEN https://sirtkoyu.org/v2/SverDe ===
+2025-08-17 18:24:35 === [4] OPEN https://sirtkoyu.org/v2/SverDe ===
+2025-08-17 18:24:47     ▶ play butonuna tıklandı
+2025-08-17 18:24:47     ▶ play butonuna tıklandı
+2025-08-17 18:24:47     120 saniye bekleniyor…
+2025-08-17 18:24:47     120 saniye bekleniyor…
+2025-08-17 18:26:47 === [4] DONE https://sirtkoyu.org/v2/SverDe ===
+2025-08-17 18:26:47 === [4] DONE https://sirtkoyu.org/v2/SverDe ===
+2025-08-17 18:26:48 === [5] OPEN https://sirtkoyu.org/v2/TPyryP ===
+2025-08-17 18:26:48 === [5] OPEN https://sirtkoyu.org/v2/TPyryP ===
+2025-08-17 18:27:00     ▶ play butonuna tıklandı
+2025-08-17 18:27:00     ▶ play butonuna tıklandı
+2025-08-17 18:27:00     120 saniye bekleniyor…
+2025-08-17 18:27:00     120 saniye bekleniyor…
+2025-08-17 18:29:00 === [5] DONE https://sirtkoyu.org/v2/TPyryP ===
+2025-08-17 18:29:00 === [5] DONE https://sirtkoyu.org/v2/TPyryP ===
