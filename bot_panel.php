@@ -149,10 +149,23 @@ $lists = reconcile_and_persist($PROXY,$BAD,$DEF_BAD);
 $proxy_lines  = $lists['proxy'];
 $bad_lines    = $lists['bad'];
 $def_lines    = $lists['def'];
+
+/* === STABİL SIRALAMA — tablo satırlarının yer değiştirmesini önler === */
+if ($bad_lines) usort($bad_lines, 'strnatcasecmp');
+if ($def_lines) usort($def_lines, 'strnatcasecmp');
+
 $counts       = load_counts($COUNTS);
 $url_lines    = read_lines($URLS);
 $log_size     = is_file($LOG)  ? filesize($LOG)  : 0;
 $log1_size    = is_file($LOG1) ? filesize($LOG1) : 0;
+
+/* Sayılar (başlıklarda göstermek için) */
+$eligible_cnt = 0;
+foreach ($bad_lines as $p){
+  $c = (int)($counts[$p] ?? 0);
+  if ($c < $FAIL_LIMIT && !in_array($p,$def_lines,true)) $eligible_cnt++;
+}
+$def_cnt = count($def_lines);
 ?>
 <!doctype html>
 <html lang="tr">
@@ -160,6 +173,7 @@ $log1_size    = is_file($LOG1) ? filesize($LOG1) : 0;
 <meta charset="utf-8">
 <title>Proxy Yönetim Paneli (AJAX)</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" href="/proje1/img/favicon.svg">
 <style>
   body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:1200px;margin:24px auto;padding:0 12px}
   h2{margin:8px 0 12px}
@@ -189,6 +203,9 @@ $log1_size    = is_file($LOG1) ? filesize($LOG1) : 0;
   .topbar .btn{background:#0b1222;color:#fff;border-color:#334155}
   .topbar select{padding:6px 8px;border:1px solid #334155;border-radius:8px;background:#0b1222;color:#fff}
   .topbar label{display:flex;align-items:center;gap:6px;font-size:14px}
+  /* Kartların zıplamasını engelle */
+  #badCard{min-height:340px}
+  #defBadCard{min-height:220px}
   @media (max-width: 980px){ .row{grid-template-columns:1fr} .logWrap{grid-template-columns:1fr} }
 </style>
 </head>
@@ -273,7 +290,9 @@ $log1_size    = is_file($LOG1) ? filesize($LOG1) : 0;
 
   <div class="row" style="margin-top:16px">
     <div id="badCard" class="card">
-      <h3>Hatalı Proxyler (tekrar denenebilir)</h3>
+      <h3>Hatalı Proxyler (tekrar denenebilir)
+        <span class="muted">• toplam: <?=count($bad_lines)?> • uygun: <?=$eligible_cnt?></span>
+      </h3>
       <form method="post">
         <input type="hidden" name="csrf" value="<?=h($csrf)?>">
         <table>
@@ -306,7 +325,9 @@ $log1_size    = is_file($LOG1) ? filesize($LOG1) : 0;
     </div>
 
     <div id="defBadCard" class="card">
-      <h3>Kesin Hatalı Proxyler (<?=$FAIL_LIMIT?>+ hata)</h3>
+      <h3>Kesin Hatalı Proxyler (<?=$FAIL_LIMIT?>+ hata)
+        <span class="muted">• toplam: <?=$def_cnt?></span>
+      </h3>
       <table>
         <tr><th>Proxy</th><th>Hata Sayısı</th></tr>
         <?php if(!$def_lines): ?>
@@ -421,23 +442,73 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   async function fetchBoth(){ await Promise.all([fetchLeft(), fetchRight()]); }
 
-  // Yalnızca HATALI listeleri (bad/defBad) parça yenile (aktif proxy listesi sabit kalsın)
-  async function replaceHTML(id, url){
-    var el = document.getElementById(id);
-    if (!el) return;
+  /* ===== Hatalı listelerini flicker olmadan güncelle ===== */
+  var lastHtmlMap = { bad: '', def: '' };
+  var inFlightBad = 0, inFlightDef = 0;
+
+  function getCheckedBadValues(){
+    var arr = [];
+    document.querySelectorAll('#badCard input[name="sel[]"]:checked')?.forEach(function(cb){
+      arr.push(cb.value);
+    });
+    return arr;
+  }
+  function restoreCheckedBadValues(values){
+    if (!values || !values.length) return;
+    var set = new Set(values);
+    document.querySelectorAll('#badCard input[name="sel[]"]')?.forEach(function(cb){
+      if (set.has(cb.value)) cb.checked = true;
+    });
+  }
+
+  async function replaceBadCard(){
+    if (inFlightBad) return; inFlightBad = 1;
+    var card = document.getElementById('badCard');
+    if (!card){ inFlightBad=0; return; }
+
+    var checked = getCheckedBadValues();
+    var scrollY = card.scrollTop;
+
     try{
-      var res = await fetch(url + (url.indexOf('?') !== -1 ? '&' : '?') + '_=' + Date.now(), { cache:'no-store' });
-      if (!res.ok) return;
+      var res = await fetch('proxy_view.php?part=bad&_=' + Date.now(), { cache:'no-store' });
+      if (!res.ok){ inFlightBad=0; return; }
       var html = await res.text();
-      el.innerHTML = html;
-    }catch(e){}
+
+      // Değişmediyse DOM’a dokunma (flicker yok, checkbox/scroll kaybolmaz)
+      if (html === lastHtmlMap.bad){ inFlightBad=0; return; }
+
+      card.innerHTML = html;
+      lastHtmlMap.bad = html;
+
+      // İşaretli kutuları geri yükle + scroll’u koru
+      restoreCheckedBadValues(checked);
+      card.scrollTop = scrollY;
+    }catch(e){
+    }finally{
+      inFlightBad = 0;
+    }
   }
-  async function refreshHataListeleri(){
-    await Promise.all([
-      replaceHTML('badCard',    'proxy_view.php?part=bad'),
-      replaceHTML('defBadCard', 'proxy_view.php?part=def')
-    ]);
+
+  async function replaceDefBadCard(){
+    if (inFlightDef) return; inFlightDef = 1;
+    var card = document.getElementById('defBadCard');
+    if (!card){ inFlightDef=0; return; }
+    var scrollY = card.scrollTop;
+    try{
+      var res = await fetch('proxy_view.php?part=def&_=' + Date.now(), { cache:'no-store' });
+      if (!res.ok){ inFlightDef=0; return; }
+      var html = await res.text();
+      if (html === lastHtmlMap.def){ inFlightDef=0; return; }
+      card.innerHTML = html;
+      lastHtmlMap.def = html;
+      card.scrollTop = scrollY;
+    }catch(e){
+    }finally{
+      inFlightDef = 0;
+    }
   }
+
+  async function refreshHataListeleri(){ await Promise.all([ replaceBadCard(), replaceDefBadCard() ]); }
 
   function setCountdownUI(){ if (countdownEl) countdownEl.textContent = String(left); }
   function restartCountdown(){

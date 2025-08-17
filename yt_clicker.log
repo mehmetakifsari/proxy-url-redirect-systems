@@ -1,52 +1,548 @@
-2025-08-17 18:17:57 [INFO] 5 URL işlenecek.
-2025-08-17 18:17:57 [INFO] 5 URL işlenecek.
-2025-08-17 18:17:57 [INFO] PW_HOME=/var/www/proje.amrdanismanlik.com/proje1/.pw  HEADLESS=True
-2025-08-17 18:17:57 [INFO] PW_HOME=/var/www/proje.amrdanismanlik.com/proje1/.pw  HEADLESS=True
-2025-08-17 18:17:59 === [1] OPEN https://sirtkoyu.org/ip_logger.php ===
-2025-08-17 18:17:59 === [1] OPEN https://sirtkoyu.org/ip_logger.php ===
-2025-08-17 18:18:06     [WARN] play tıklama/locator: Page.wait_for_selector: Timeout 6000ms exceeded.
-Call log:
-  - waiting for locator(".ytp-play-button.ytp-button") to be visible
-
-2025-08-17 18:18:06     [WARN] play tıklama/locator: Page.wait_for_selector: Timeout 6000ms exceeded.
-Call log:
-  - waiting for locator(".ytp-play-button.ytp-button") to be visible
-
-2025-08-17 18:18:06     ▶ klavye 'k' gönderildi
-2025-08-17 18:18:06     ▶ klavye 'k' gönderildi
-2025-08-17 18:18:06     120 saniye bekleniyor…
-2025-08-17 18:18:06     120 saniye bekleniyor…
-2025-08-17 18:20:06 === [1] DONE https://sirtkoyu.org/ip_logger.php ===
-2025-08-17 18:20:06 === [1] DONE https://sirtkoyu.org/ip_logger.php ===
-2025-08-17 18:20:07 === [2] OPEN https://sirtkoyu.org/v2/bdyQUG ===
-2025-08-17 18:20:07 === [2] OPEN https://sirtkoyu.org/v2/bdyQUG ===
-2025-08-17 18:20:21     ▶ play butonuna tıklandı
-2025-08-17 18:20:21     ▶ play butonuna tıklandı
-2025-08-17 18:20:21     120 saniye bekleniyor…
-2025-08-17 18:20:21     120 saniye bekleniyor…
-2025-08-17 18:22:21 === [2] DONE https://sirtkoyu.org/v2/bdyQUG ===
-2025-08-17 18:22:21 === [2] DONE https://sirtkoyu.org/v2/bdyQUG ===
-2025-08-17 18:22:22 === [3] OPEN https://sirtkoyu.org/v2/clXZ5K ===
-2025-08-17 18:22:22 === [3] OPEN https://sirtkoyu.org/v2/clXZ5K ===
-2025-08-17 18:22:34     ▶ play butonuna tıklandı
-2025-08-17 18:22:34     ▶ play butonuna tıklandı
-2025-08-17 18:22:34     120 saniye bekleniyor…
-2025-08-17 18:22:34     120 saniye bekleniyor…
-2025-08-17 18:24:34 === [3] DONE https://sirtkoyu.org/v2/clXZ5K ===
-2025-08-17 18:24:34 === [3] DONE https://sirtkoyu.org/v2/clXZ5K ===
-2025-08-17 18:24:35 === [4] OPEN https://sirtkoyu.org/v2/SverDe ===
-2025-08-17 18:24:35 === [4] OPEN https://sirtkoyu.org/v2/SverDe ===
-2025-08-17 18:24:47     ▶ play butonuna tıklandı
-2025-08-17 18:24:47     ▶ play butonuna tıklandı
-2025-08-17 18:24:47     120 saniye bekleniyor…
-2025-08-17 18:24:47     120 saniye bekleniyor…
-2025-08-17 18:26:47 === [4] DONE https://sirtkoyu.org/v2/SverDe ===
-2025-08-17 18:26:47 === [4] DONE https://sirtkoyu.org/v2/SverDe ===
-2025-08-17 18:26:48 === [5] OPEN https://sirtkoyu.org/v2/TPyryP ===
-2025-08-17 18:26:48 === [5] OPEN https://sirtkoyu.org/v2/TPyryP ===
-2025-08-17 18:27:00     ▶ play butonuna tıklandı
-2025-08-17 18:27:00     ▶ play butonuna tıklandı
-2025-08-17 18:27:00     120 saniye bekleniyor…
-2025-08-17 18:27:00     120 saniye bekleniyor…
-2025-08-17 18:29:00 === [5] DONE https://sirtkoyu.org/v2/TPyryP ===
-2025-08-17 18:29:00 === [5] DONE https://sirtkoyu.org/v2/TPyryP ===
+2025-08-17 22:25:14 [SKIP] ip_logger.php içeren URL atlandı: https://sirtkoyu.org/ip_logger.php
+2025-08-17 22:25:14 [SKIP] ip_logger.php içeren URL atlandı: https://sirtkoyu.org/ip_logger.php
+2025-08-17 22:25:14 [INFO] 4 URL işlenecek.
+2025-08-17 22:25:14 [INFO] 4 URL işlenecek.
+2025-08-17 22:25:14 [INFO] 163 proxy bulundu; HER URL tüm proxy'lerle denenecek.
+2025-08-17 22:25:14 [INFO] 163 proxy bulundu; HER URL tüm proxy'lerle denenecek.
+2025-08-17 22:25:14 [INFO] PW_HOME=/var/www/proje.amrdanismanlik.com/proje1/.pw  HEADLESS=True
+2025-08-17 22:25:14 [INFO] PW_HOME=/var/www/proje.amrdanismanlik.com/proje1/.pw  HEADLESS=True
+2025-08-17 22:25:15 === [U1/4][P1/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://173.209.63.69:8245 ===
+2025-08-17 22:25:15 === [U1/4][P1/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://173.209.63.69:8245 ===
+2025-08-17 22:25:46 [ERROR] [U1/4][P1/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:25:46 [ERROR] [U1/4][P1/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:25:47 === [U1/4][P2/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://27.79.226.40:16000 ===
+2025-08-17 22:25:47 === [U1/4][P2/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://27.79.226.40:16000 ===
+2025-08-17 22:25:56 [ERROR] [U1/4][P2/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:25:56 [ERROR] [U1/4][P2/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:25:57 === [U1/4][P3/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://139.59.228.95:8118 ===
+2025-08-17 22:25:57 === [U1/4][P3/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://139.59.228.95:8118 ===
+2025-08-17 22:25:58 [ERROR] [U1/4][P3/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:25:58 [ERROR] [U1/4][P3/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:26:00 === [U1/4][P4/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://182.253.159.191:8080 ===
+2025-08-17 22:26:00 === [U1/4][P4/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://182.253.159.191:8080 ===
+2025-08-17 22:26:21     ▶ play butonuna tıklandı
+2025-08-17 22:26:21     ▶ play butonuna tıklandı
+2025-08-17 22:26:21     120 saniye bekleniyor…
+2025-08-17 22:26:21     120 saniye bekleniyor…
+2025-08-17 22:28:21 === [U1/4][P4/163] DONE https://sirtkoyu.org/v2/bdyQUG ===
+2025-08-17 22:28:21 === [U1/4][P4/163] DONE https://sirtkoyu.org/v2/bdyQUG ===
+2025-08-17 22:28:22 === [U1/4][P5/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.19.58.174:8080 ===
+2025-08-17 22:28:22 === [U1/4][P5/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.19.58.174:8080 ===
+2025-08-17 22:28:52     ▶ play butonuna tıklandı
+2025-08-17 22:28:52     ▶ play butonuna tıklandı
+2025-08-17 22:28:52     120 saniye bekleniyor…
+2025-08-17 22:28:52     120 saniye bekleniyor…
+2025-08-17 22:30:52 === [U1/4][P5/163] DONE https://sirtkoyu.org/v2/bdyQUG ===
+2025-08-17 22:30:52 === [U1/4][P5/163] DONE https://sirtkoyu.org/v2/bdyQUG ===
+2025-08-17 22:30:54 === [U1/4][P6/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.158.57.221:8080 ===
+2025-08-17 22:30:54 === [U1/4][P6/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.158.57.221:8080 ===
+2025-08-17 22:31:03 [ERROR] [U1/4][P6/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:31:03 [ERROR] [U1/4][P6/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:31:04 === [U1/4][P7/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://112.210.212.6:8080 ===
+2025-08-17 22:31:04 === [U1/4][P7/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://112.210.212.6:8080 ===
+2025-08-17 22:31:12 [ERROR] [U1/4][P7/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:31:12 [ERROR] [U1/4][P7/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:31:13 === [U1/4][P8/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.167.170.151:8080 ===
+2025-08-17 22:31:13 === [U1/4][P8/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.167.170.151:8080 ===
+2025-08-17 22:31:22 [ERROR] [U1/4][P8/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:31:22 [ERROR] [U1/4][P8/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:31:23 === [U1/4][P9/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://66.201.40.43:8888 ===
+2025-08-17 22:31:23 === [U1/4][P9/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://66.201.40.43:8888 ===
+2025-08-17 22:31:24 [ERROR] [U1/4][P9/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:31:24 [ERROR] [U1/4][P9/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:31:25 === [U1/4][P10/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://8.215.15.163:104 ===
+2025-08-17 22:31:25 === [U1/4][P10/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://8.215.15.163:104 ===
+2025-08-17 22:31:31 [ERROR] [U1/4][P10/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:31:31 [ERROR] [U1/4][P10/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:31:32 === [U1/4][P11/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://168.220.89.95:3128 ===
+2025-08-17 22:31:32 === [U1/4][P11/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://168.220.89.95:3128 ===
+2025-08-17 22:32:03 [ERROR] [U1/4][P11/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:32:03 [ERROR] [U1/4][P11/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:32:05 === [U1/4][P12/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://41.59.90.171:80 ===
+2025-08-17 22:32:05 === [U1/4][P12/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://41.59.90.171:80 ===
+2025-08-17 22:32:11 [ERROR] [U1/4][P12/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:32:11 [ERROR] [U1/4][P12/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:32:12 === [U1/4][P13/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://158.255.77.169:80 ===
+2025-08-17 22:32:12 === [U1/4][P13/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://158.255.77.169:80 ===
+2025-08-17 22:32:13 [ERROR] [U1/4][P13/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:32:13 [ERROR] [U1/4][P13/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:32:14 === [U1/4][P14/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://72.10.160.94:29225 ===
+2025-08-17 22:32:14 === [U1/4][P14/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://72.10.160.94:29225 ===
+2025-08-17 22:32:14 [ERROR] [U1/4][P14/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:32:14 [ERROR] [U1/4][P14/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:32:16 === [U1/4][P15/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://72.10.160.172:28327 ===
+2025-08-17 22:32:16 === [U1/4][P15/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://72.10.160.172:28327 ===
+2025-08-17 22:32:16 [ERROR] [U1/4][P15/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:32:16 [ERROR] [U1/4][P15/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:32:18 === [U1/4][P16/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://123.141.181.10:5031 ===
+2025-08-17 22:32:18 === [U1/4][P16/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://123.141.181.10:5031 ===
+2025-08-17 22:32:23 [ERROR] [U1/4][P16/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:32:23 [ERROR] [U1/4][P16/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:32:24 === [U1/4][P17/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://173.209.63.68:8047 ===
+2025-08-17 22:32:24 === [U1/4][P17/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://173.209.63.68:8047 ===
+2025-08-17 22:32:54 [ERROR] [U1/4][P17/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:32:54 [ERROR] [U1/4][P17/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:32:55 === [U1/4][P18/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://14.225.240.23:8562 ===
+2025-08-17 22:32:55 === [U1/4][P18/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://14.225.240.23:8562 ===
+2025-08-17 22:33:00 [ERROR] [U1/4][P18/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:33:00 [ERROR] [U1/4][P18/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:33:01 === [U1/4][P19/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://72.10.160.170:3949 ===
+2025-08-17 22:33:01 === [U1/4][P19/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://72.10.160.170:3949 ===
+2025-08-17 22:33:01 [ERROR] [U1/4][P19/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:33:01 [ERROR] [U1/4][P19/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:33:03 === [U1/4][P20/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://67.43.236.18:3927 ===
+2025-08-17 22:33:03 === [U1/4][P20/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://67.43.236.18:3927 ===
+2025-08-17 22:33:03 [ERROR] [U1/4][P20/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:33:03 [ERROR] [U1/4][P20/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:33:05 === [U1/4][P21/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://123.141.181.38:5031 ===
+2025-08-17 22:33:05 === [U1/4][P21/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://123.141.181.38:5031 ===
+2025-08-17 22:33:14 [ERROR] [U1/4][P21/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:33:14 [ERROR] [U1/4][P21/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:33:15 === [U1/4][P22/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://67.43.228.251:28401 ===
+2025-08-17 22:33:15 === [U1/4][P22/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://67.43.228.251:28401 ===
+2025-08-17 22:33:16 [ERROR] [U1/4][P22/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:33:16 [ERROR] [U1/4][P22/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:33:17 === [U1/4][P23/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://47.252.11.233:9050 ===
+2025-08-17 22:33:17 === [U1/4][P23/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://47.252.11.233:9050 ===
+2025-08-17 22:33:27 [ERROR] [U1/4][P23/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:33:27 [ERROR] [U1/4][P23/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:33:28 === [U1/4][P24/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://47.251.87.199:1036 ===
+2025-08-17 22:33:28 === [U1/4][P24/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://47.251.87.199:1036 ===
+2025-08-17 22:33:38 [ERROR] [U1/4][P24/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:33:38 [ERROR] [U1/4][P24/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:33:39 === [U1/4][P25/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://8.211.195.173:6666 ===
+2025-08-17 22:33:39 === [U1/4][P25/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://8.211.195.173:6666 ===
+2025-08-17 22:33:43 [ERROR] [U1/4][P25/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:33:43 [ERROR] [U1/4][P25/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:33:44 === [U1/4][P26/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://8.212.151.166:9797 ===
+2025-08-17 22:33:44 === [U1/4][P26/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://8.212.151.166:9797 ===
+2025-08-17 22:33:51 [ERROR] [U1/4][P26/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:33:51 [ERROR] [U1/4][P26/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:33:52 === [U1/4][P27/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://130.180.214.60:3128 ===
+2025-08-17 22:33:52 === [U1/4][P27/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://130.180.214.60:3128 ===
+2025-08-17 22:34:01 [ERROR] [U1/4][P27/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:34:01 [ERROR] [U1/4][P27/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:34:02 === [U1/4][P28/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://1.179.231.130:8080 ===
+2025-08-17 22:34:02 === [U1/4][P28/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://1.179.231.130:8080 ===
+2025-08-17 22:34:11 [ERROR] [U1/4][P28/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:34:11 [ERROR] [U1/4][P28/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:34:12 === [U1/4][P29/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://23.171.9.140:8888 ===
+2025-08-17 22:34:12 === [U1/4][P29/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://23.171.9.140:8888 ===
+2025-08-17 22:35:13     [WARN] sayfa açılışı zaman aşımı (60s)
+2025-08-17 22:35:13     [WARN] sayfa açılışı zaman aşımı (60s)
+2025-08-17 22:35:19     [WARN] play tıklama/locator: zaman aşımı (6000 ms).
+2025-08-17 22:35:19     [WARN] play tıklama/locator: zaman aşımı (6000 ms).
+2025-08-17 22:35:19     ▶ klavye 'k' gönderildi
+2025-08-17 22:35:19     ▶ klavye 'k' gönderildi
+2025-08-17 22:35:19     120 saniye bekleniyor…
+2025-08-17 22:35:19     120 saniye bekleniyor…
+2025-08-17 22:37:19 === [U1/4][P29/163] DONE https://sirtkoyu.org/v2/bdyQUG ===
+2025-08-17 22:37:19 === [U1/4][P29/163] DONE https://sirtkoyu.org/v2/bdyQUG ===
+2025-08-17 22:37:21 === [U1/4][P30/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.10.230.246:1337 ===
+2025-08-17 22:37:21 === [U1/4][P30/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.10.230.246:1337 ===
+2025-08-17 22:37:29 [ERROR] [U1/4][P30/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:37:29 [ERROR] [U1/4][P30/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:37:30 === [U1/4][P31/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.120.175.243:9191 ===
+2025-08-17 22:37:30 === [U1/4][P31/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.120.175.243:9191 ===
+2025-08-17 22:37:39 [ERROR] [U1/4][P31/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:37:39 [ERROR] [U1/4][P31/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:37:40 === [U1/4][P32/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://94.73.239.124:55443 ===
+2025-08-17 22:37:40 === [U1/4][P32/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://94.73.239.124:55443 ===
+2025-08-17 22:37:49 [ERROR] [U1/4][P32/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:37:49 [ERROR] [U1/4][P32/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:37:50 === [U1/4][P33/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://47.238.130.212:8004 ===
+2025-08-17 22:37:50 === [U1/4][P33/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://47.238.130.212:8004 ===
+2025-08-17 22:38:15 [ERROR] [U1/4][P33/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:38:15 [ERROR] [U1/4][P33/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:38:16 === [U1/4][P34/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://188.166.230.109:31028 ===
+2025-08-17 22:38:16 === [U1/4][P34/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://188.166.230.109:31028 ===
+2025-08-17 22:38:41     [WARN] play tıklama/locator: zaman aşımı (6000 ms).
+2025-08-17 22:38:41     [WARN] play tıklama/locator: zaman aşımı (6000 ms).
+2025-08-17 22:38:41     ▶ klavye 'k' gönderildi
+2025-08-17 22:38:41     ▶ klavye 'k' gönderildi
+2025-08-17 22:38:41     120 saniye bekleniyor…
+2025-08-17 22:38:41     120 saniye bekleniyor…
+2025-08-17 22:40:41 === [U1/4][P34/163] DONE https://sirtkoyu.org/v2/bdyQUG ===
+2025-08-17 22:40:41 === [U1/4][P34/163] DONE https://sirtkoyu.org/v2/bdyQUG ===
+2025-08-17 22:40:42 === [U1/4][P35/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://120.28.214.157:8080 ===
+2025-08-17 22:40:42 === [U1/4][P35/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://120.28.214.157:8080 ===
+2025-08-17 22:40:51 [ERROR] [U1/4][P35/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:40:51 [ERROR] [U1/4][P35/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:40:52 === [U1/4][P36/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://141.11.25.188:3128 ===
+2025-08-17 22:40:52 === [U1/4][P36/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://141.11.25.188:3128 ===
+2025-08-17 22:41:01 [ERROR] [U1/4][P36/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:41:01 [ERROR] [U1/4][P36/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:41:02 === [U1/4][P37/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://110.232.80.183:8080 ===
+2025-08-17 22:41:02 === [U1/4][P37/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://110.232.80.183:8080 ===
+2025-08-17 22:41:10 [ERROR] [U1/4][P37/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:41:10 [ERROR] [U1/4][P37/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:41:12 === [U1/4][P38/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://47.74.46.81:11310 ===
+2025-08-17 22:41:12 === [U1/4][P38/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://47.74.46.81:11310 ===
+2025-08-17 22:41:18 [ERROR] [U1/4][P38/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:41:18 [ERROR] [U1/4][P38/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:41:19 === [U1/4][P39/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://49.254.107.184:28766 ===
+2025-08-17 22:41:19 === [U1/4][P39/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://49.254.107.184:28766 ===
+2025-08-17 22:41:50 [ERROR] [U1/4][P39/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:41:50 [ERROR] [U1/4][P39/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:41:52 === [U1/4][P40/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://119.235.112.42:3128 ===
+2025-08-17 22:41:52 === [U1/4][P40/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://119.235.112.42:3128 ===
+2025-08-17 22:42:11 [ERROR] [U1/4][P40/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:42:11 [ERROR] [U1/4][P40/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:42:12 === [U1/4][P41/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://116.203.139.209:5678 ===
+2025-08-17 22:42:12 === [U1/4][P41/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://116.203.139.209:5678 ===
+2025-08-17 22:42:15 [ERROR] [U1/4][P41/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:42:15 [ERROR] [U1/4][P41/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:42:16 === [U1/4][P42/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://202.178.125.136:8080 ===
+2025-08-17 22:42:16 === [U1/4][P42/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://202.178.125.136:8080 ===
+2025-08-17 22:43:17     [WARN] sayfa açılışı zaman aşımı (60s)
+2025-08-17 22:43:17     [WARN] sayfa açılışı zaman aşımı (60s)
+2025-08-17 22:43:23     [WARN] play tıklama/locator: zaman aşımı (6000 ms).
+2025-08-17 22:43:23     [WARN] play tıklama/locator: zaman aşımı (6000 ms).
+2025-08-17 22:43:23     ▶ klavye 'k' gönderildi
+2025-08-17 22:43:23     ▶ klavye 'k' gönderildi
+2025-08-17 22:43:23     120 saniye bekleniyor…
+2025-08-17 22:43:23     120 saniye bekleniyor…
+2025-08-17 22:45:23 === [U1/4][P42/163] DONE https://sirtkoyu.org/v2/bdyQUG ===
+2025-08-17 22:45:23 === [U1/4][P42/163] DONE https://sirtkoyu.org/v2/bdyQUG ===
+2025-08-17 22:45:24 === [U1/4][P43/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://129.212.186.157:3128 ===
+2025-08-17 22:45:24 === [U1/4][P43/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://129.212.186.157:3128 ===
+2025-08-17 22:45:33 [ERROR] [U1/4][P43/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:45:33 [ERROR] [U1/4][P43/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:45:34 === [U1/4][P44/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://134.236.231.19:8080 ===
+2025-08-17 22:45:34 === [U1/4][P44/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://134.236.231.19:8080 ===
+2025-08-17 22:45:43 [ERROR] [U1/4][P44/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:45:43 [ERROR] [U1/4][P44/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:45:44 === [U1/4][P45/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://45.123.142.84:1111 ===
+2025-08-17 22:45:44 === [U1/4][P45/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://45.123.142.84:1111 ===
+2025-08-17 22:45:53 [ERROR] [U1/4][P45/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:45:53 [ERROR] [U1/4][P45/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:45:54 === [U1/4][P46/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://190.94.213.6:999 ===
+2025-08-17 22:45:54 === [U1/4][P46/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://190.94.213.6:999 ===
+2025-08-17 22:46:03 [ERROR] [U1/4][P46/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:46:03 [ERROR] [U1/4][P46/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:46:04 === [U1/4][P47/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.191.254.2:8080 ===
+2025-08-17 22:46:04 === [U1/4][P47/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.191.254.2:8080 ===
+2025-08-17 22:46:10 [ERROR] [U1/4][P47/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:46:10 [ERROR] [U1/4][P47/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:46:11 === [U1/4][P48/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.148.184.82:8080 ===
+2025-08-17 22:46:11 === [U1/4][P48/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.148.184.82:8080 ===
+2025-08-17 22:46:20 [ERROR] [U1/4][P48/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:46:20 [ERROR] [U1/4][P48/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:46:21 === [U1/4][P49/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://200.217.165.114:8080 ===
+2025-08-17 22:46:21 === [U1/4][P49/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://200.217.165.114:8080 ===
+2025-08-17 22:46:29 [ERROR] [U1/4][P49/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:46:29 [ERROR] [U1/4][P49/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:46:31 === [U1/4][P50/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://116.203.56.216:2212 ===
+2025-08-17 22:46:31 === [U1/4][P50/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://116.203.56.216:2212 ===
+2025-08-17 22:47:21     ▶ play butonuna tıklandı
+2025-08-17 22:47:21     ▶ play butonuna tıklandı
+2025-08-17 22:47:21     120 saniye bekleniyor…
+2025-08-17 22:47:21     120 saniye bekleniyor…
+2025-08-17 22:49:21 === [U1/4][P50/163] DONE https://sirtkoyu.org/v2/bdyQUG ===
+2025-08-17 22:49:21 === [U1/4][P50/163] DONE https://sirtkoyu.org/v2/bdyQUG ===
+2025-08-17 22:49:22 === [U1/4][P51/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://8.221.141.88:1527 ===
+2025-08-17 22:49:22 === [U1/4][P51/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://8.221.141.88:1527 ===
+2025-08-17 22:49:30 [ERROR] [U1/4][P51/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:30 [ERROR] [U1/4][P51/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:31 === [U1/4][P52/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://47.91.104.88:3128 ===
+2025-08-17 22:49:31 === [U1/4][P52/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://47.91.104.88:3128 ===
+2025-08-17 22:49:32 [ERROR] [U1/4][P52/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:32 [ERROR] [U1/4][P52/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:33 === [U1/4][P53/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://47.89.184.18:3128 ===
+2025-08-17 22:49:33 === [U1/4][P53/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://47.89.184.18:3128 ===
+2025-08-17 22:49:34 [ERROR] [U1/4][P53/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:34 [ERROR] [U1/4][P53/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:36 === [U1/4][P54/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://47.243.92.199:3128 ===
+2025-08-17 22:49:36 === [U1/4][P54/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://47.243.92.199:3128 ===
+2025-08-17 22:49:37 [ERROR] [U1/4][P54/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:37 [ERROR] [U1/4][P54/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:38 === [U1/4][P55/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://38.127.179.226:55994 ===
+2025-08-17 22:49:38 === [U1/4][P55/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://38.127.179.226:55994 ===
+2025-08-17 22:49:39 [ERROR] [U1/4][P55/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:39 [ERROR] [U1/4][P55/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:41 === [U1/4][P56/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://100.42.112.23:3128 ===
+2025-08-17 22:49:41 === [U1/4][P56/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://100.42.112.23:3128 ===
+2025-08-17 22:49:41 [ERROR] [U1/4][P56/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:41 [ERROR] [U1/4][P56/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:43 === [U1/4][P57/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.25.230.253:80 ===
+2025-08-17 22:49:43 === [U1/4][P57/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.25.230.253:80 ===
+2025-08-17 22:49:43 [ERROR] [U1/4][P57/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:43 [ERROR] [U1/4][P57/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:44 === [U1/4][P58/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://84.239.14.153:9002 ===
+2025-08-17 22:49:44 === [U1/4][P58/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://84.239.14.153:9002 ===
+2025-08-17 22:49:45 [ERROR] [U1/4][P58/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:45 [ERROR] [U1/4][P58/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:46 === [U1/4][P59/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://185.238.228.89:80 ===
+2025-08-17 22:49:46 === [U1/4][P59/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://185.238.228.89:80 ===
+2025-08-17 22:49:47 [ERROR] [U1/4][P59/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:47 [ERROR] [U1/4][P59/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:48 === [U1/4][P60/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://178.45.173.15:7788 ===
+2025-08-17 22:49:48 === [U1/4][P60/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://178.45.173.15:7788 ===
+2025-08-17 22:49:57 [ERROR] [U1/4][P60/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:57 [ERROR] [U1/4][P60/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:49:58 === [U1/4][P61/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://190.186.23.99:5678 ===
+2025-08-17 22:49:58 === [U1/4][P61/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://190.186.23.99:5678 ===
+2025-08-17 22:50:07 [ERROR] [U1/4][P61/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:07 [ERROR] [U1/4][P61/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:08 === [U1/4][P62/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.26.247.102:56707 ===
+2025-08-17 22:50:08 === [U1/4][P62/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.26.247.102:56707 ===
+2025-08-17 22:50:09 [ERROR] [U1/4][P62/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:09 [ERROR] [U1/4][P62/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:10 === [U1/4][P63/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://178.45.148.153:7788 ===
+2025-08-17 22:50:10 === [U1/4][P63/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://178.45.148.153:7788 ===
+2025-08-17 22:50:18 [ERROR] [U1/4][P63/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:18 [ERROR] [U1/4][P63/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:19 === [U1/4][P64/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://100.4.91.158:8080 ===
+2025-08-17 22:50:19 === [U1/4][P64/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://100.4.91.158:8080 ===
+2025-08-17 22:50:28 [ERROR] [U1/4][P64/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:28 [ERROR] [U1/4][P64/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:29 === [U1/4][P65/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://45.131.6.166:80 ===
+2025-08-17 22:50:29 === [U1/4][P65/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://45.131.6.166:80 ===
+2025-08-17 22:50:30 [ERROR] [U1/4][P65/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:30 [ERROR] [U1/4][P65/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:31 === [U1/4][P66/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://47.253.214.60:1604 ===
+2025-08-17 22:50:31 === [U1/4][P66/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://47.253.214.60:1604 ===
+2025-08-17 22:50:36 [ERROR] [U1/4][P66/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:36 [ERROR] [U1/4][P66/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:37 === [U1/4][P67/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.21.33.52:80 ===
+2025-08-17 22:50:37 === [U1/4][P67/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.21.33.52:80 ===
+2025-08-17 22:50:38 [ERROR] [U1/4][P67/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:38 [ERROR] [U1/4][P67/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:39 === [U1/4][P68/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.18.210.234:80 ===
+2025-08-17 22:50:39 === [U1/4][P68/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.18.210.234:80 ===
+2025-08-17 22:50:40 [ERROR] [U1/4][P68/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:40 [ERROR] [U1/4][P68/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:41 === [U1/4][P69/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.60.136.129:4153 ===
+2025-08-17 22:50:41 === [U1/4][P69/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.60.136.129:4153 ===
+2025-08-17 22:50:42 [ERROR] [U1/4][P69/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:42 [ERROR] [U1/4][P69/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:44 === [U1/4][P70/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.24.21.89:80 ===
+2025-08-17 22:50:44 === [U1/4][P70/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.24.21.89:80 ===
+2025-08-17 22:50:44 [ERROR] [U1/4][P70/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:44 [ERROR] [U1/4][P70/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:46 === [U1/4][P71/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://185.170.233.106:47574 ===
+2025-08-17 22:50:46 === [U1/4][P71/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://185.170.233.106:47574 ===
+2025-08-17 22:50:54 [ERROR] [U1/4][P71/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:54 [ERROR] [U1/4][P71/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:55 === [U1/4][P72/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://110.78.82.233:5678 ===
+2025-08-17 22:50:55 === [U1/4][P72/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://110.78.82.233:5678 ===
+2025-08-17 22:50:56 [ERROR] [U1/4][P72/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:56 [ERROR] [U1/4][P72/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:57 === [U1/4][P73/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://185.162.229.228:80 ===
+2025-08-17 22:50:57 === [U1/4][P73/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://185.162.229.228:80 ===
+2025-08-17 22:50:58 [ERROR] [U1/4][P73/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:58 [ERROR] [U1/4][P73/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:50:59 === [U1/4][P74/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://202.179.184.46:5430 ===
+2025-08-17 22:50:59 === [U1/4][P74/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://202.179.184.46:5430 ===
+2025-08-17 22:51:00 [ERROR] [U1/4][P74/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:00 [ERROR] [U1/4][P74/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:02 === [U1/4][P75/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.21.8.128:80 ===
+2025-08-17 22:51:02 === [U1/4][P75/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.21.8.128:80 ===
+2025-08-17 22:51:02 [ERROR] [U1/4][P75/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:02 [ERROR] [U1/4][P75/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:04 === [U1/4][P76/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.17.163.30:80 ===
+2025-08-17 22:51:04 === [U1/4][P76/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.17.163.30:80 ===
+2025-08-17 22:51:04 [ERROR] [U1/4][P76/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:04 [ERROR] [U1/4][P76/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:05 === [U1/4][P77/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://172.67.78.11:80 ===
+2025-08-17 22:51:05 === [U1/4][P77/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://172.67.78.11:80 ===
+2025-08-17 22:51:06 [ERROR] [U1/4][P77/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:06 [ERROR] [U1/4][P77/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:08 === [U1/4][P78/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://31.12.75.106:80 ===
+2025-08-17 22:51:08 === [U1/4][P78/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://31.12.75.106:80 ===
+2025-08-17 22:51:08 [ERROR] [U1/4][P78/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:08 [ERROR] [U1/4][P78/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:09 === [U1/4][P79/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.27.92.180:80 ===
+2025-08-17 22:51:09 === [U1/4][P79/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.27.92.180:80 ===
+2025-08-17 22:51:10 [ERROR] [U1/4][P79/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:10 [ERROR] [U1/4][P79/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:11 === [U1/4][P80/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://177.38.245.110:55713 ===
+2025-08-17 22:51:11 === [U1/4][P80/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://177.38.245.110:55713 ===
+2025-08-17 22:51:13 [ERROR] [U1/4][P80/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:13 [ERROR] [U1/4][P80/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:14 === [U1/4][P81/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://212.126.5.245:42344 ===
+2025-08-17 22:51:14 === [U1/4][P81/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://212.126.5.245:42344 ===
+2025-08-17 22:51:20 [ERROR] [U1/4][P81/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:20 [ERROR] [U1/4][P81/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:21 === [U1/4][P82/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://47.254.241.21:21491 ===
+2025-08-17 22:51:21 === [U1/4][P82/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://47.254.241.21:21491 ===
+2025-08-17 22:51:29 [ERROR] [U1/4][P82/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:29 [ERROR] [U1/4][P82/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:30 === [U1/4][P83/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://65.21.94.13:9443 ===
+2025-08-17 22:51:30 === [U1/4][P83/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://65.21.94.13:9443 ===
+2025-08-17 22:51:31 [ERROR] [U1/4][P83/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:31 [ERROR] [U1/4][P83/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:33 === [U1/4][P84/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.16.1.28:80 ===
+2025-08-17 22:51:33 === [U1/4][P84/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.16.1.28:80 ===
+2025-08-17 22:51:33 [ERROR] [U1/4][P84/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:33 [ERROR] [U1/4][P84/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:35 === [U1/4][P85/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.215.148.25:43928 ===
+2025-08-17 22:51:35 === [U1/4][P85/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.215.148.25:43928 ===
+2025-08-17 22:51:35 [ERROR] [U1/4][P85/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:35 [ERROR] [U1/4][P85/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:37 === [U1/4][P86/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://203.30.190.46:80 ===
+2025-08-17 22:51:37 === [U1/4][P86/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://203.30.190.46:80 ===
+2025-08-17 22:51:37 [ERROR] [U1/4][P86/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:37 [ERROR] [U1/4][P86/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:38 === [U1/4][P87/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.19.138.172:80 ===
+2025-08-17 22:51:38 === [U1/4][P87/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.19.138.172:80 ===
+2025-08-17 22:51:40 [ERROR] [U1/4][P87/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:40 [ERROR] [U1/4][P87/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:41 === [U1/4][P88/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.16.109.140:80 ===
+2025-08-17 22:51:41 === [U1/4][P88/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.16.109.140:80 ===
+2025-08-17 22:51:42 [ERROR] [U1/4][P88/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:42 [ERROR] [U1/4][P88/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:43 === [U1/4][P89/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://181.204.4.74:5678 ===
+2025-08-17 22:51:43 === [U1/4][P89/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://181.204.4.74:5678 ===
+2025-08-17 22:51:52 [ERROR] [U1/4][P89/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:52 [ERROR] [U1/4][P89/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:53 === [U1/4][P90/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.21.212.242:80 ===
+2025-08-17 22:51:53 === [U1/4][P90/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.21.212.242:80 ===
+2025-08-17 22:51:54 [ERROR] [U1/4][P90/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:54 [ERROR] [U1/4][P90/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:55 === [U1/4][P91/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://119.8.111.196:1080 ===
+2025-08-17 22:51:55 === [U1/4][P91/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://119.8.111.196:1080 ===
+2025-08-17 22:51:56 [ERROR] [U1/4][P91/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:56 [ERROR] [U1/4][P91/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:57 === [U1/4][P92/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://1.0.0.187:80 ===
+2025-08-17 22:51:57 === [U1/4][P92/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://1.0.0.187:80 ===
+2025-08-17 22:51:57 [ERROR] [U1/4][P92/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:57 [ERROR] [U1/4][P92/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:59 === [U1/4][P93/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://66.235.200.142:80 ===
+2025-08-17 22:51:59 === [U1/4][P93/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://66.235.200.142:80 ===
+2025-08-17 22:51:59 [ERROR] [U1/4][P93/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:51:59 [ERROR] [U1/4][P93/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:00 === [U1/4][P94/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://5.182.34.75:80 ===
+2025-08-17 22:52:00 === [U1/4][P94/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://5.182.34.75:80 ===
+2025-08-17 22:52:01 [ERROR] [U1/4][P94/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:01 [ERROR] [U1/4][P94/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:02 === [U1/4][P95/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://206.238.236.160:80 ===
+2025-08-17 22:52:02 === [U1/4][P95/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://206.238.236.160:80 ===
+2025-08-17 22:52:03 [ERROR] [U1/4][P95/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:03 [ERROR] [U1/4][P95/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:04 === [U1/4][P96/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://51.91.106.22:57108 ===
+2025-08-17 22:52:04 === [U1/4][P96/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://51.91.106.22:57108 ===
+2025-08-17 22:52:05 [ERROR] [U1/4][P96/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:05 [ERROR] [U1/4][P96/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:06 === [U1/4][P97/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://178.253.197.186:4153 ===
+2025-08-17 22:52:06 === [U1/4][P97/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://178.253.197.186:4153 ===
+2025-08-17 22:52:07 [ERROR] [U1/4][P97/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:07 [ERROR] [U1/4][P97/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:08 === [U1/4][P98/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.35.108.206:23991 ===
+2025-08-17 22:52:08 === [U1/4][P98/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.35.108.206:23991 ===
+2025-08-17 22:52:09 [ERROR] [U1/4][P98/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:09 [ERROR] [U1/4][P98/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:10 === [U1/4][P99/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://202.159.35.33:443 ===
+2025-08-17 22:52:10 === [U1/4][P99/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://202.159.35.33:443 ===
+2025-08-17 22:52:19 [ERROR] [U1/4][P99/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:19 [ERROR] [U1/4][P99/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:20 === [U1/4][P100/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.12.246.197:4145 ===
+2025-08-17 22:52:20 === [U1/4][P100/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.12.246.197:4145 ===
+2025-08-17 22:52:28 [ERROR] [U1/4][P100/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:28 [ERROR] [U1/4][P100/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:30 === [U1/4][P101/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://162.214.191.59:60768 ===
+2025-08-17 22:52:30 === [U1/4][P101/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://162.214.191.59:60768 ===
+2025-08-17 22:52:30 [ERROR] [U1/4][P101/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:30 [ERROR] [U1/4][P101/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:32 === [U1/4][P102/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.27.16.122:80 ===
+2025-08-17 22:52:32 === [U1/4][P102/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.27.16.122:80 ===
+2025-08-17 22:52:33 [ERROR] [U1/4][P102/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:33 [ERROR] [U1/4][P102/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:34 === [U1/4][P103/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://216.24.57.178:80 ===
+2025-08-17 22:52:34 === [U1/4][P103/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://216.24.57.178:80 ===
+2025-08-17 22:52:35 [ERROR] [U1/4][P103/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:35 [ERROR] [U1/4][P103/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:36 === [U1/4][P104/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.27.15.20:80 ===
+2025-08-17 22:52:36 === [U1/4][P104/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.27.15.20:80 ===
+2025-08-17 22:52:37 [ERROR] [U1/4][P104/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:37 [ERROR] [U1/4][P104/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:38 === [U1/4][P105/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.17.25.103:80 ===
+2025-08-17 22:52:38 === [U1/4][P105/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.17.25.103:80 ===
+2025-08-17 22:52:39 [ERROR] [U1/4][P105/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:39 [ERROR] [U1/4][P105/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:40 === [U1/4][P106/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://138.36.151.11:8090 ===
+2025-08-17 22:52:40 === [U1/4][P106/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://138.36.151.11:8090 ===
+2025-08-17 22:52:49 [ERROR] [U1/4][P106/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:49 [ERROR] [U1/4][P106/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:50 === [U1/4][P107/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://181.88.73.182:5678 ===
+2025-08-17 22:52:50 === [U1/4][P107/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://181.88.73.182:5678 ===
+2025-08-17 22:52:54 [ERROR] [U1/4][P107/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:54 [ERROR] [U1/4][P107/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:55 === [U1/4][P108/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://177.91.134.174:80 ===
+2025-08-17 22:52:55 === [U1/4][P108/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://177.91.134.174:80 ===
+2025-08-17 22:52:56 [ERROR] [U1/4][P108/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:56 [ERROR] [U1/4][P108/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:52:57 === [U1/4][P109/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://118.71.99.233:5678 ===
+2025-08-17 22:52:57 === [U1/4][P109/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://118.71.99.233:5678 ===
+2025-08-17 22:53:03 [ERROR] [U1/4][P109/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:03 [ERROR] [U1/4][P109/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:04 === [U1/4][P110/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://45.80.110.69:80 ===
+2025-08-17 22:53:04 === [U1/4][P110/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://45.80.110.69:80 ===
+2025-08-17 22:53:05 [ERROR] [U1/4][P110/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:05 [ERROR] [U1/4][P110/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:06 === [U1/4][P111/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://115.127.22.161:9990 ===
+2025-08-17 22:53:06 === [U1/4][P111/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://115.127.22.161:9990 ===
+2025-08-17 22:53:07 [ERROR] [U1/4][P111/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:07 [ERROR] [U1/4][P111/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:08 === [U1/4][P112/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://43.153.52.170:443 ===
+2025-08-17 22:53:08 === [U1/4][P112/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://43.153.52.170:443 ===
+2025-08-17 22:53:09 [ERROR] [U1/4][P112/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:09 [ERROR] [U1/4][P112/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:10 === [U1/4][P113/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://185.162.230.216:80 ===
+2025-08-17 22:53:10 === [U1/4][P113/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://185.162.230.216:80 ===
+2025-08-17 22:53:11 [ERROR] [U1/4][P113/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:11 [ERROR] [U1/4][P113/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:12 === [U1/4][P114/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://146.59.155.82:16276 ===
+2025-08-17 22:53:12 === [U1/4][P114/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://146.59.155.82:16276 ===
+2025-08-17 22:53:13 [ERROR] [U1/4][P114/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:13 [ERROR] [U1/4][P114/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:14 === [U1/4][P115/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://95.37.186.86:7788 ===
+2025-08-17 22:53:14 === [U1/4][P115/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://95.37.186.86:7788 ===
+2025-08-17 22:53:23 [ERROR] [U1/4][P115/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:23 [ERROR] [U1/4][P115/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:24 === [U1/4][P116/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://5.10.247.128:80 ===
+2025-08-17 22:53:24 === [U1/4][P116/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://5.10.247.128:80 ===
+2025-08-17 22:53:24 [ERROR] [U1/4][P116/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:24 [ERROR] [U1/4][P116/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:26 === [U1/4][P117/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://154.83.2.96:80 ===
+2025-08-17 22:53:26 === [U1/4][P117/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://154.83.2.96:80 ===
+2025-08-17 22:53:27 [ERROR] [U1/4][P117/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:27 [ERROR] [U1/4][P117/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:28 === [U1/4][P118/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.254.140.128:80 ===
+2025-08-17 22:53:28 === [U1/4][P118/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.254.140.128:80 ===
+2025-08-17 22:53:29 [ERROR] [U1/4][P118/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:29 [ERROR] [U1/4][P118/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:30 === [U1/4][P119/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://177.136.86.5:999 ===
+2025-08-17 22:53:30 === [U1/4][P119/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://177.136.86.5:999 ===
+2025-08-17 22:53:39 [ERROR] [U1/4][P119/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:39 [ERROR] [U1/4][P119/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:41 === [U1/4][P120/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://31.43.179.154:80 ===
+2025-08-17 22:53:41 === [U1/4][P120/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://31.43.179.154:80 ===
+2025-08-17 22:53:41 [ERROR] [U1/4][P120/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:41 [ERROR] [U1/4][P120/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:43 === [U1/4][P121/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://172.67.175.139:80 ===
+2025-08-17 22:53:43 === [U1/4][P121/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://172.67.175.139:80 ===
+2025-08-17 22:53:43 [ERROR] [U1/4][P121/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:43 [ERROR] [U1/4][P121/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:44 === [U1/4][P122/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.76.190.210:58275 ===
+2025-08-17 22:53:44 === [U1/4][P122/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://103.76.190.210:58275 ===
+2025-08-17 22:53:45 [ERROR] [U1/4][P122/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:45 [ERROR] [U1/4][P122/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:47 === [U1/4][P123/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://117.74.127.22:1133 ===
+2025-08-17 22:53:47 === [U1/4][P123/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://117.74.127.22:1133 ===
+2025-08-17 22:53:47 [ERROR] [U1/4][P123/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:47 [ERROR] [U1/4][P123/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:49 === [U1/4][P124/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.25.50.21:80 ===
+2025-08-17 22:53:49 === [U1/4][P124/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://104.25.50.21:80 ===
+2025-08-17 22:53:50 [ERROR] [U1/4][P124/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:50 [ERROR] [U1/4][P124/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:51 === [U1/4][P125/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://170.114.46.89:80 ===
+2025-08-17 22:53:51 === [U1/4][P125/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://170.114.46.89:80 ===
+2025-08-17 22:53:52 [ERROR] [U1/4][P125/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:52 [ERROR] [U1/4][P125/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:53 === [U1/4][P126/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://114.116.246.230:1080 ===
+2025-08-17 22:53:53 === [U1/4][P126/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://114.116.246.230:1080 ===
+2025-08-17 22:53:54 [ERROR] [U1/4][P126/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:54 [ERROR] [U1/4][P126/163] https://sirtkoyu.org/v2/bdyQUG Erişim hatası
+2025-08-17 22:53:55 === [U1/4][P127/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://75.119.206.91:32524 ===
+2025-08-17 22:53:55 === [U1/4][P127/163] OPEN https://sirtkoyu.org/v2/bdyQUG via http://75.119.206.91:32524 ===

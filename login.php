@@ -66,6 +66,7 @@ $next = (string)($_GET['next'] ?? $PANEL_URL);
 <head>
 <meta charset="utf-8">
 <title>Giriş Yap</title>
+<link rel="icon" type="image/png" href="/proje1/img/favicon.svg">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
   /* Kaymaları engelleyen temel ayarlar */
