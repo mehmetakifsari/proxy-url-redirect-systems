@@ -1,0 +1,3 @@
+<Files ".bot_users">
+  Require all denied
+</Files>
